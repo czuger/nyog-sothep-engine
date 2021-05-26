@@ -1,7 +1,8 @@
-require_relative 'models/board_element_investigator'
-require_relative 'models/board_element_professor'
-require_relative 'models/map_cities'
-require_relative 'models/monsters_pool'
+require_relative 'libs/board_element_investigator'
+require_relative 'libs/board_element_professor'
+require_relative 'libs/map_cities'
+require_relative 'libs/monsters_pool'
+require_relative 'libs/player_interface'
 
 locations = MapLocations.new
 cities = MapCities.new
@@ -30,9 +31,10 @@ loop do
     puts "#{next_location} invalid. (#{destinations})"
   end
 
-  break if next_location == ''
+  monster = PlayerInterface.input_monsters_choice(professor, cities)
 
-  map = professor.monsters_placement map
+  professor.hand.delete(monster)
+  map[professor.location] = monster
   professor.hand << monsters_pool.pick_monster
 end
 

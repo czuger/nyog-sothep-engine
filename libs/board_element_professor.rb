@@ -19,24 +19,4 @@ class BoardElementProfessor < BoardElement
     self
   end
 
-  def monsters_placement(map)
-    @choice = Hash[([:nothing]+@hand).each_with_index.map { |x,i| [i, x] }]
-    puts 'What does the prof place ?'
-    p @choice
-
-    monster_id = input_monster_choice
-    p monster_id
-
-    map[@location] = @choice[monster_id]
-    @hand.delete(@choice[monster_id])
-    map
-  end
-
-  def input_monster_choice
-    loop do
-      input = gets.chomp.to_i
-      return input if @choice[input]
-      puts "#{input} invalid. (#{@choice})"
-    end
-  end
 end
