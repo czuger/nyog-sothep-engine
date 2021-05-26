@@ -16,4 +16,11 @@ class MapCities < MapLocations
     @locations[location]&.port
   end
 
+  def random_city(exclusion=nil)
+    loop do
+      city = @locations.sample
+      return city unless exclusion == city
+    end
+  end
+
 end
