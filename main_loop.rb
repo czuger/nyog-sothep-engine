@@ -1,18 +1,23 @@
 require_relative 'models/board_element_investigator'
 require_relative 'models/board_element_professor'
 require_relative 'models/map_cities'
+require_relative 'models/monsters_pool'
 
 locations = MapLocations.new
 cities = MapCities.new
+map = {}
 
 investigators = 1.upto(4).map{ BoardElementInvestigator.new }
 
-professor = BoardElementProfessor.new.prof_input cities, start=:milford, invoc=:taunton
+monsters_pool = MonstersPool.new
+professor = BoardElementProfessor.new(monsters_pool).prof_input cities, start=:milford, invoc=:taunton
 p professor
 
 loop do
   destinations = locations.destinations(professor.location)
   destinations_choice = locations.destinations_choice professor.location
+
+  p map
 
   puts 'Where does the prof goes ?'
   p destinations_choice
@@ -26,6 +31,9 @@ loop do
   end
 
   break if next_location == ''
+
+  map = professor.monsters_placement map
+  professor.hand << monsters_pool.pick_monster
 end
 
 
