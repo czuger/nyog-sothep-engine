@@ -1,3 +1,5 @@
+require_relative 'board_element_professor'
+
 class PlayerInterface
 
   def initialize

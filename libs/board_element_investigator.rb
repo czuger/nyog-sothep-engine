@@ -11,7 +11,8 @@ class BoardElementInvestigator < BoardElement
 
   def initialize
     super
-    @location = :nantucket
+    # @location = :nantucket
+    @location = :boston
     @san = Hazard.d3d6 + 3
     @name = @@names.sample
     @@names.delete(@name)

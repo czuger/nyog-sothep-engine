@@ -1,0 +1,38 @@
+		EFFET	SAN	OBJ FOUND	OBJ LOST
+1	1. Absorbé par d'inquiétantes réflexions, vous vous perdez sur les petites routes : revenez à la ville que vous venez de quitter.	BACK			
+2	2. Vous découvrez un repaire de Profonds: sous perdez 2 points de SAN, mais vous trouvez une arme.		-2	WEAPON	
+3	3. Vous rencontrez un vieillard. II vous donne un signe protecteur et vous parle longuement des créatures de l’au-delà: vous perdez 2 points de SAN.		-2	SIGN	
+4	4. Un psychanalyste de renom s'intéresse à vos troubles: vous devez passer votre prochain tour, mais vous gagnerez 5 points de SAN.	WAIT	5		
+5	5. Des voyageurs vous parlent du Professeur: celui-ci doit vous citer trois villes dont une est son actuelle Position (s'il est en mer, il le dit).	PROF_3			
+6	6. Dans le grenier d'une vieille maison, un grimoire en mauvais état: certaines pages, est pénibles a lire, expliquent comment renvoyer Nyog'Sothep. Un sort de renvoi qui vous fait perdre 2 points de SAN		-2	REPELL	
+7	7. Vous errez dans le cimetière, la nuit. Vous vous rendez compte que ce dernier est infesté de Goules : sous perdez 2 points de SAN et votre arme (si vous en avez une)		-2		WEAPON
+8	8. Votre voiture refuse d'avancer: passez le tour suivant, sauf si vous prenez la mer.	WAIT			
+9	9. Vous trouvez des traces du Professeur et no médaillon. Slim& par ces découvertes, vous rejouez immédiatement.	REPLAY			
+10	10. Le Professeur fait parler de lui: il doit vous dire deux villes dont une est son actuelle position (s'il est en mer, il le dit).	PROF_2			
+11	II. Vous êtes agressé par des adorateurs déments: vous perdez 2 points de SAN, mais vous gagnez une mine.		-2	WEAPON	
+12	12. Vous trouvez no vieux manuscrit qui parle a demi-mots de Nyog'Sothep : vous y apprenez le sort de renvoi, mais vous perdez 3 points de SAN.		-3	REPELL	
+13	13. Le Professeur doit révéler son actuelle position.	PROF_1			
+14	14. Vous gagnez du temps sur le Professeur : rejouez.	REPLAY			
+15	15. Le Professeur Petersen don désormais signaler ses mouvements en mer (sans préciser la zone).	PROF_3			
+16	16. Citez deux villes an Professeur: il doit vous dire s'il y a des rencontres dans celles-ci. S'il y est, il n'ajoute rien. II ne précise pas les rencontres.	ENCOUNTER_2			
+17	17. Citez deux villes an Professeur: it doit vous dire si Nyog'Sothep doit y apparaître.	NYOG			
+18	18. Le Professeur doit révéler sa position et indiquer le nombre de Fanatiques qui sont déjà prêts.	PROF_1			
+					
+1	1. Vous séjournez chez un psychanalyste : passez votre prochain tour, vous gagnerez 5 points de SAN.	WAIT	5		
+2	2. Vous observez des Goules près dune vieille crypte : vous perdez 3 points de SAN, mais sous trouvez une arme.		-3	WEAPON	
+3	3. Dans une matte, vous trouvez de vieux manuscrits qui montrent comment renvoyer l'Immonde. Ce sort de renvoi vous fait perdre 3 points de SAN.		-3	REPELL	
+4	4. Grâce a de bonnes informations, vous êtes lancé sur une piste qui vous semble intéressante rejouez.	REPLAY			
+5	5. Un ermite dont ('esprit est an peu dérangé vous donne an signe protecteur et vous parle de créatures insensées : vous perdez 2 points de SAN.		-2	SIGN	
+6	6. Vous entendez parler de Petersen: ce dernier doit vous citer trois villes dont son actuelle position (01 est en mer, il le dit).	PROF_3			
+7	7. Impossible de vous y retrouver dans ce labyrinthe de routes secondaires : retournez a la ville d’où vous venez pour vans informer sur le bon chemin.	BACK			
+8	8. Pres dune sortie d’égouts, no cadavre de Profond: auprès de lui vous trouvez un médaillon de Fanatique, mais vous perdez 3 points de SAN.		-3	MEDAILLON	
+9	9. Des nouvelles du Professeur: il doit vous citer deux villes dont une est son actuelle position (s'il est en mer, il le dit).	PROF_2			
+10	10. La lecture d'un gros livre d'occultisme vous apprend le sort de renvoi. Vous perdez 2 points de SAN, mais vous rejouez immédiatement.	REPLAY	-3	REPELL	
+11	11. II. En discutant avec les policiers locaux vous vous êtes fait des amis. Vous gagnez une arme et vous rejouez.	REPLAY		WEAPON	
+12	12. Votre sommeil est peuplé de créatures étranges et de visions incroyables : vous perdez 2 points de SAN.		-2		
+13	13. Des voyageurs ont vu récemment Petersen: il doit se montrer et faire son prochain &placement a découvert,	PROF_1			
+14	14. Un prêtre vous parle de ces Fanatiques qui infestent la région: le Professeur doit vous citer deux villes dont une contient des Fanatiques.	ENCOUNTER_2			
+15	15. Dans la bibliothèque, un vieux livre qui parle des légendes locales: certaines créatures brumeuses y sont citées. Vous perdez 2 points de SAN, mais vous pouvez citer deux villes au Professeur: it vous dit si Nyog'Sothep doit y apparaître.	NYOG	-2		
+16	16. Les plans du Professeur vous paraissent de plus en plus clairs : citez-lui une ville. S'il y a une rencontre dan celle-ci, il doit vous la préciser.	ENCOUNTER_1			
+17	17. Vous sentez que vous touchez an but: rejouez.	REPLAY			
+18	18. Vous marchez dans la campagne. Perdu dans vos réflexions vous êtes surpris par la nuit et une brume anormale ! vous y perdez votre arme (si vous en avez une) et 2 points de SAN.		-2	WEAPON	

@@ -18,9 +18,13 @@ class MapCities < MapLocations
 
   def random_city(exclusion=nil)
     loop do
-      city = @locations.sample
+      city = @locations.keys.sample
       return city unless exclusion == city
     end
+  end
+
+  def city?(location)
+    @locations[location]
   end
 
 end

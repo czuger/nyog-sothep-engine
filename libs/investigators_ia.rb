@@ -2,22 +2,24 @@ require_relative 'map_cities'
 
 class InvestigatorsIA
 
+  attr_reader :positions
+
   def initialize
     @positions = {}
     @cities = MapCities.new
   end
 
-  def prof_localized(evenment, professor)
+  def prof_localized(prof_action, professor)
     prof_loc = [professor.location]
     confidence = 4
 
-    1.upto(evenment.to_s.match(/\d/)[0].to_i).each do
+    1.upto(prof_action.to_s.match(/\d/)[0].to_i - 1).each do
       prof_loc << @cities.random_city(professor.location)
       confidence -= 1
     end
 
     prof_loc.each do |loc|
-      @positions[loc] = [@positions[loc], confidence].max
+      @positions[loc] = [@positions[loc] || 0, confidence].max
     end
   end
 

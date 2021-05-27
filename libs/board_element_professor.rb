@@ -1,6 +1,7 @@
 require 'hazard'
 require_relative 'board_element'
 require_relative 'map_cities'
+require_relative 'monsters_pool'
 
 class BoardElementProfessor < BoardElement
 

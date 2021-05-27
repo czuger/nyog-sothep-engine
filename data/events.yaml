@@ -1,0 +1,128 @@
+---
+1:
+  1: !ruby/object:OpenStruct
+    table:
+      :action: :back
+  2: !ruby/object:OpenStruct
+    table:
+      :san: -2
+      :found: :weapon
+  3: !ruby/object:OpenStruct
+    table:
+      :san: -2
+      :found: :sign
+  4: !ruby/object:OpenStruct
+    table:
+      :san: 5
+      :action: :wait
+  5: !ruby/object:OpenStruct
+    table:
+      :action: :prof_3
+  6: !ruby/object:OpenStruct
+    table:
+      :san: -2
+      :found: :repell
+  7: !ruby/object:OpenStruct
+    table:
+      :san: -2
+      :lost: :weapon
+  8: !ruby/object:OpenStruct
+    table:
+      :action: :wait
+  9: !ruby/object:OpenStruct
+    table:
+      :action: :replay
+  10: !ruby/object:OpenStruct
+    table:
+      :action: :prof_2
+  11: !ruby/object:OpenStruct
+    table:
+      :san: -2
+      :found: :weapon
+  12: !ruby/object:OpenStruct
+    table:
+      :san: -3
+      :found: :repell
+  13: !ruby/object:OpenStruct
+    table:
+      :action: :prof_1
+  14: !ruby/object:OpenStruct
+    table:
+      :action: :replay
+  15: !ruby/object:OpenStruct
+    table:
+      :action: :prof_3
+  16: !ruby/object:OpenStruct
+    table:
+      :action: :encounter_2
+  17: !ruby/object:OpenStruct
+    table:
+      :action: :nyog
+  18: !ruby/object:OpenStruct
+    table:
+      :action: :prof_1
+2:
+  1: !ruby/object:OpenStruct
+    table:
+      :san: 5
+      :action: :wait
+  2: !ruby/object:OpenStruct
+    table:
+      :san: -3
+      :found: :weapon
+  3: !ruby/object:OpenStruct
+    table:
+      :san: -3
+      :found: :repell
+  4: !ruby/object:OpenStruct
+    table:
+      :action: :replay
+  5: !ruby/object:OpenStruct
+    table:
+      :san: -2
+      :found: :sign
+  6: !ruby/object:OpenStruct
+    table:
+      :action: :prof_3
+  7: !ruby/object:OpenStruct
+    table:
+      :action: :back
+  8: !ruby/object:OpenStruct
+    table:
+      :san: -3
+      :found: :medaillon
+  9: !ruby/object:OpenStruct
+    table:
+      :action: :prof_2
+  10: !ruby/object:OpenStruct
+    table:
+      :san: -3
+      :action: :replay
+      :found: :repell
+  11: !ruby/object:OpenStruct
+    table:
+      :action: :replay
+      :found: :weapon
+  12: !ruby/object:OpenStruct
+    table:
+      :san: -2
+  13: !ruby/object:OpenStruct
+    table:
+      :action: :prof_1
+  14: !ruby/object:OpenStruct
+    table:
+      :action: :encounter_2
+  15: !ruby/object:OpenStruct
+    table:
+      :san: -2
+      :action: :nyog
+  16: !ruby/object:OpenStruct
+    table:
+      :action: :encounter_1
+  17: !ruby/object:OpenStruct
+    table:
+      :action: :replay
+  18: !ruby/object:OpenStruct
+    table:
+      :san: -2
+      :found: :weapon
