@@ -1,18 +1,20 @@
 require 'hazard'
 require_relative 'board_element'
 require_relative 'map_cities'
-require_relative 'monsters_pool'
+require_relative 'encounters/encounters_pool'
+require_relative 'encounters/hand'
 
 class BoardElementProfessor < BoardElement
 
-  attr_accessor :hand, :location, :monsters_pool
+  attr_accessor :hand, :location, :encounters_pool
 
-  def initialize(location, nyog_sothep_location)
+  def initialize(map, location, nyog_sothep_location)
     super()
     @location = location
     @nyog_sothep_location = nyog_sothep_location
-    @monsters_pool = MonstersPool.new
-    @hand = @monsters_pool.pick_monsters(4)
+    @encounters_pool = EncountersPool.new map
+    @hand = Hand.new
+    1.upto(4).each{ |e| @hand.add(@encounters_pool.pick_encounter) }
   end
 
 end

@@ -8,7 +8,7 @@ class PlayerInterface
   end
 
   def input_monsters_choice(professor)
-    choice = Hash[([:nothing]+professor.hand).each_with_index.map { |x,i| [i, x] }]
+    choice = Hash[([:nothing]+professor.hand.keys).each_with_index.map { |x,i| [i, x] }]
     input = nil
 
     loop do
@@ -30,10 +30,10 @@ class PlayerInterface
     choice[input]
   end
 
-  def prof_setup(start = nil, invoc = nil )
+  def prof_setup(map, start = nil, invoc = nil )
     location = start || @cities.input('Input the starting location of the prof.')
     nyog_sothep_location = invoc || @cities.input('Input the invocation location.')
-    BoardElementProfessor.new(location, nyog_sothep_location)
+    BoardElementProfessor.new(map, location, nyog_sothep_location)
   end
 
   def location_input(cities, msg)

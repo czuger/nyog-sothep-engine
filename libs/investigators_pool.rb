@@ -15,7 +15,7 @@ class InvestigatorsPool
     @cities = MapCities.new
   end
 
-  def play(professor)
+  def play(map, professor)
     @investigators.each do |investigator|
       puts '*'*100
       puts "Turn of #{investigator.name} (#{investigator.location})"
@@ -27,6 +27,8 @@ class InvestigatorsPool
       dest = @movement_graph.find_path(investigator.location, dest)
       puts "#{investigator.name} moving to #{dest.next_step}"
       investigator.location = dest.next_step
+
+      investigator = professor.encounters_pool.resolve_encounter(investigator)
 
       if @cities.city?(investigator.location)
         investigator = @events.resolve(investigator, professor, @ia)
@@ -43,5 +45,6 @@ class InvestigatorsPool
     p @ia.positions
     puts '*'*100
 
+    map
   end
 end

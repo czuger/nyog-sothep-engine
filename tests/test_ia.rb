@@ -7,7 +7,7 @@ class TestIA < MiniTest::Unit::TestCase
   def setup
     @ia = InvestigatorsIA.new
     pi = PlayerInterface.new
-    @professor = pi.prof_setup :milford, :taunton
+    @professor = pi.prof_setup({}, :milford, :taunton)
   end
 
   def test_prof_3
