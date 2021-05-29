@@ -7,7 +7,7 @@ class EncountersPool
   attr_accessor :monsters_pool
 
   MONSTERS_INIT_TOKENS = [
-      [6, :reves], [8, :goules],
+      [6, :reves], [8, :goules], [8, :profonds]
   ]
 
   # MONSTERS_INIT_TOKENS = [
@@ -21,7 +21,7 @@ class EncountersPool
   # ]
 
   MONSTERS_INIT_TABLE = [
-    [42, :reves], [9, :goules]
+    [42, :reves], [9, :goules], [19, :profonds]
   ]
 
   def initialize(map)
