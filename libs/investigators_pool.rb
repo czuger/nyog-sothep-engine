@@ -21,7 +21,7 @@ class InvestigatorsPool
       puts "Turn of #{investigator.name} (#{investigator.location})"
       puts '*'*100
 
-      dest = @ia.target_position
+      dest = @ia.target_position(investigator)
       puts "Destination = #{dest}"
 
       dest = @movement_graph.find_path(investigator.location, dest)

@@ -24,10 +24,10 @@ class InvestigatorsIA
   end
 
   # Give a target for the investigators
-  def target_position
+  def target_position(investigator)
     max_confidence = @positions.values.max
-    position = @positions.select {|key, value| value == max_confidence }.keys.sample
-    position = @cities.random_city unless position
+    position = @positions.select {|key, value| value == max_confidence }.keys.reject{ |e| e == investigator.location }.sample
+    position = @cities.random_city(exclusion = investigator.location) unless position
     position
   end
 

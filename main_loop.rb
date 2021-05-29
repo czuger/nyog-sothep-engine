@@ -8,6 +8,7 @@ require_relative 'libs/investigators_pool'
 investigators = InvestigatorsPool.new
 pi = PlayerInterface.new
 map = {}
+cities = MapCities.new
 
 
 professor = pi.prof_setup map,:milford, :taunton
@@ -19,11 +20,13 @@ loop do
 
   professor.location = next_location
 
-  monster = pi.input_monsters_choice(professor) unless map[professor.location]
-
-  professor.hand.remove(monster)
-
-  map[professor.location] = monster
+  unless map[professor.location]
+    if cities.city?(professor.location)
+      monster = pi.input_monsters_choice(professor)
+      professor.hand.remove(monster)
+      map[professor.location] = monster
+    end
+  end
 
   professor.hand.add(professor.encounters_pool.pick_encounter)
 

@@ -16,7 +16,7 @@ class Hand
   end
 
   def remove(item)
-    raise StandardError.new 'Not supposed removing a non existing item' unless @content[item]
+    raise StandardError.new "Not supposed removing a non existing item : #{item}" unless @content[item]
     @content[item] -= 1
     @content.delete(item) if @content[item] == 0
   end
@@ -26,7 +26,7 @@ class Hand
   end
 
   def exhausted?(item)
-    @content[item] == 0
+    @content[item].nil? || @content[item] == 0
   end
 
   def keys
