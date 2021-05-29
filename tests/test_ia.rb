@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 require 'minitest/autorun'
 require_relative '../libs/investigators_ia'
 require_relative '../libs/player_interface'

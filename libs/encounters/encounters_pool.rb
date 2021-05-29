@@ -51,7 +51,7 @@ class EncountersPool
     encounter = @map[investigator.location]
     if encounter
       result = Encounter.send(encounter, investigator)
-      @encounters_pool << encounter if result.return_in_monster_pool
+      @encounters_pool.add(encounter) if result.return_in_monster_pool
       @map.delete(investigator.location) if result.remove_from_map
       return result.investigator
     end

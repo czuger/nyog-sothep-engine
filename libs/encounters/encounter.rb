@@ -25,7 +25,7 @@ class Encounter
 
     san_loss -= 1 if investigator.items.sign
     investigator.san -= san_loss
-    puts "#{investigator.name} fait un rêve et perds #{san_loss} SAN -> (#{investigator.san})"
+    puts "#{investigator.name} rencontre des goules et perds #{san_loss} SAN -> (#{investigator.san})"
     result
   end
 end
